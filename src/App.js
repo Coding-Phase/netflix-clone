@@ -17,7 +17,7 @@ const App = () => {
       {/* 2nd way to style */}
       <p style={{color: 'red', fontSize: '50px'}}>lorem lorem dolor sit vushsk jfdusemf </p>   
          
-     </div> 
+    </div> 
   );
 };
 
