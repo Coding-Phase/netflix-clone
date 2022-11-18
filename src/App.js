@@ -1,27 +1,23 @@
+import './App.css';
+import Nav from './components/nav/Nav';
+import Header from './components/header/Header';
+import Content from './components/content/Content';
+import axios from 'axios';
 
-import './App.css'     
-
-
-// just create a function here !
-
-
-const App = () => {
-  const name = 'vishal thakur';
-
-  return (
-    <div>
-
-      {/* 1st way to style */}
-      <h1 className='title'>Hello {name} </h1>  
-
-      {/* 2nd way to style */}
-      <p style={{color: 'red', fontSize: '50px'}}>lorem lorem dolor sit vushsk jfdusemf </p>   
-         
-    </div> 
-  );
+axios.defaults.baseURL = 'https://api.themoviedb.org/3';
+axios.defaults.params = {
+  api_key: '00cc4b4770c22d9316433c56df5c5eae',
 };
 
 
+const App = () => {
+  return (
+    <div>
+      <Nav />
+      <Header />
+      <Content />
+    </div>
+  );
+};
 
-
-export default App;     // Export the function to see output in web-page
+export default App;
